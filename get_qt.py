@@ -37,7 +37,7 @@ class GetStatusRetweets(object):
         try:
             for tweet in ts.search_tweets_iterable(tso):
                 if 'quoted_status' in tweet:
-                    if tweet['quoted_status']['quoted_status_id'] == status_id:
+                    if tweet['quoted_status']['id'] == status_id:
                         yield tweet
 
         except TwitterSearchException as e:
