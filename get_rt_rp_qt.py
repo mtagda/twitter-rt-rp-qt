@@ -43,7 +43,7 @@ class GetStatusRTAndRPAndQT(object):
                 elif tweet['in_reply_to_status_id'] == status_id:
                     yield tweet
                 elif 'quoted_status' in tweet:
-                    if tweet['quoted_status']['quoted_status_id'] == status_id:
+                    if tweet['quoted_status']['id'] == status_id:
                         yield tweet
 
         except TwitterSearchException as e:
