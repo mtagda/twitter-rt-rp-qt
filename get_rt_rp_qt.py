@@ -24,7 +24,7 @@ class GetStatusRTAndRPAndQT(object):
 
         # Create a TwitterSearchOrder object
         tso = TwitterSearchOrder()
-        keywords = '@' + str(screen_name) + ' include:retweets'
+        keywords = '@' + str(screen_name)
         tso.set_keywords([keywords])
 
         # Create a TwitterSearch object with secret tokens
